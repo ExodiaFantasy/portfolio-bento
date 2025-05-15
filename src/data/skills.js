@@ -1,62 +1,73 @@
 export const skills = [
+    // Technical skills
     {
         name: "AWS",
-        proficiency: "95%"
+        level: 5
     },
     {
         name: "Azure",
-        proficiency: "85%"
+        level: 4
     },
     {
         name: "Kubernetes",
-        proficiency: "90%"
-    },
-    {
-        name: "TensorFlow",
-        proficiency: "80%"
-    },
-    {
-        name: "PyTorch",
-        proficiency: "75%"
-    },
-    {
-        name: "Natural Language Processing (NLP)",
-        proficiency: "85%"
+        level: 5
     },
     {
         name: "Python",
-        proficiency: "90%"
+        level: 5
     },
     {
         name: "JavaScript",
-        proficiency: "85%"
+        level: 4
     },
     {
         name: "TypeScript",
-        proficiency: "80%"
+        level: 4
     },
     {
-        name: "Go",
-        proficiency: "70%"
+        name: "TensorFlow",
+        level: 4
     },
     {
-        name: "Java",
-        proficiency: "75%"
+        name: "PyTorch",
+        level: 4
+    },
+    // Professional skills
+    {
+        name: "Cloud Architecture",
+        level: 5
     },
     {
-        name: "Rust",
-        proficiency: "60%"
+        name: "ML/AI Engineering",
+        level: 4
     },
     {
-        name: "SQL",
-        proficiency: "85%"
+        name: "DevOps",
+        level: 4
     },
     {
-        name: "Bash",
-        proficiency: "80%"
+        name: "System Design",
+        level: 5
+    },
+    {
+        name: "Project Management",
+        level: 3
+    },
+    {
+        name: "Team Leadership",
+        level: 4
+    },
+    {
+        name: "Problem Solving",
+        level: 5
+    },
+    {
+        name: "Technical Writing",
+        level: 3
     },
     {
         name: "C++",
-        proficiency: "70%"
+        proficiency: "Proficient",
+        level: 3
     }
 ];

@@ -1,0 +1,26 @@
+/* filepath: d:\Codes\Portfolio\src\components\WorkProcessBox\WorkProcessBox.css */
+.process-card .process-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.process-card .process-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.process-card .process-icon {
+    background: linear-gradient(135deg, #4f46e5, #2563eb);
+    transition: transform 0.3s ease;
+}
+
+.process-card .process-item:hover .process-icon {
+    transform: scale(1.1);
+}
+
+.dark .process-card .process-item {
+    background-color: rgba(55, 65, 81, 0.5);
+}
+
+.dark .process-card .process-item:hover {
+    background-color: rgba(55, 65, 81, 0.8);
+}

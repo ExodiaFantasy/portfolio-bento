@@ -19,12 +19,13 @@ const Hero = () => {
             Building the future with scalable cloud infrastructure and intelligent systems.
             Specializing in AWS, Azure, ML/AI, and data engineering.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a 
-              href="#projects" 
-              className="py-3 px-8 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-md transition-all transform hover:-translate-y-1 hover:shadow-lg"
+          <div className="flex flex-wrap justify-center gap-4">            <a 
+              href="/resume.pdf" 
+              download="John_Doe_Resume.pdf"
+              className="py-3 px-8 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-md transition-all transform hover:-translate-y-1 hover:shadow-lg flex items-center justify-center gap-2"
             >
-              View My Work
+              <i className="fas fa-download mr-2"></i>
+              Download CV
             </a>
             <a 
               href="#contact" 

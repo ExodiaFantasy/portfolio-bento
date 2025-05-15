@@ -1,23 +1,33 @@
 import React from 'react';
 import BentoCard from '../BentoCard/BentoCard.jsx';
 import { skills as skillsData } from '../../data/skills';
+import './Skills.css';
 
 const Skills = () => {
-    // Group skills by category (assuming first 6 are frontend, next 6 are backend)
-    const frontendSkills = skillsData.slice(0, 6);
-    const backendSkills = skillsData.slice(6);
-    
-    const renderSkill = (skill, index) => (
-        <div key={index} className="skill-item">
-            <div className="flex justify-between mb-1">
-                <span className="text-sm text-gray-600 dark:text-gray-400">{skill.name}</span>
-                <span className="text-xs font-medium text-gray-800 dark:text-gray-200">{skill.proficiency}</span>
+    // Group skills by category
+    const technicalSkills = skillsData.filter((_, index) => index < 8);
+    const professionalSkills = skillsData.filter((_, index) => index >= 8);
+      const renderStars = (level) => {
+        const maxStars = 5;
+        return (
+            <div className="flex">
+                {[...Array(maxStars)].map((_, i) => (
+                    <span 
+                        key={i} 
+                        className={`star ${i < level ? 'text-yellow-400' : 'text-gray-300 dark:text-gray-600'}`}
+                        style={{ animationDelay: `${i * 0.1}s` }}
+                    >
+                        ★
+                    </span>
+                ))}
             </div>
-            <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                <div 
-                    className="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full"
-                    style={{ width: skill.proficiency }}
-                ></div>
+        );
+    };
+      const renderSkill = (skill, index) => (
+        <div key={index} className="skill-row">
+            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{skill.name}</span>
+            <div className="flex items-center">
+                {renderStars(skill.level)}
             </div>
         </div>
     );
@@ -29,19 +39,15 @@ const Skills = () => {
         >
             <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">💻 Skills</h3>
             
-            <div className="grid grid-cols-2 gap-4">
-                <div className="mb-4">
-                    <h4 className="font-medium text-gray-700 dark:text-gray-300 mb-2">Technical</h4>
-                    <div className="space-y-2">
-                        {frontendSkills.map(renderSkill)}
-                    </div>
+            <div className="skills-container pr-2">
+                <h4 className="font-medium text-gray-700 dark:text-gray-300 mb-3">Technical</h4>
+                <div className="mb-6">
+                    {technicalSkills.map(renderSkill)}
                 </div>
                 
-                <div className="mb-4">
-                    <h4 className="font-medium text-gray-700 dark:text-gray-300 mb-2">Professional</h4>
-                    <div className="space-y-2">
-                        {backendSkills.map(renderSkill)}
-                    </div>
+                <h4 className="font-medium text-gray-700 dark:text-gray-300 mb-3">Professional</h4>
+                <div>
+                    {professionalSkills.map(renderSkill)}
                 </div>
             </div>
         </BentoCard>

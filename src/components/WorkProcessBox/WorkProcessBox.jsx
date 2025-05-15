@@ -2,6 +2,7 @@
 import React from 'react';
 import BentoCard from '../BentoCard/BentoCard.jsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './WorkProcessBox.css';
 
 const WorkProcessBox = () => {
     const processes = [
@@ -38,23 +39,21 @@ const WorkProcessBox = () => {
         >
             <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">⚙️ Work Process</h3>
             
-            <div className="space-y-4">
-                {processes.map(process => (
-                    <div key={process.id} className="flex items-start gap-3">
-                        <div className="flex-shrink-0 mt-1">
-                            <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">
-                                <FontAwesomeIcon 
-                                    icon={process.icon} 
-                                    className="text-blue-600 dark:text-blue-300 text-sm" 
-                                />
-                            </div>
+            <div className="grid grid-cols-2 gap-4">
+                {processes.map(process => (                    <div 
+                        key={process.id} 
+                        className="process-item flex flex-col items-center text-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg"
+                    >
+                        <div className="process-icon w-12 h-12 mb-3 rounded-full flex items-center justify-center">
+                            <FontAwesomeIcon 
+                                icon={process.icon} 
+                                className="text-white text-lg" 
+                            />
                         </div>
-                        <div>
-                            <h4 className="font-medium text-gray-900 dark:text-white">{process.title}</h4>
-                            <p className="text-sm text-gray-600 dark:text-gray-400">
-                                {process.description}
-                            </p>
-                        </div>
+                        <h4 className="font-medium text-gray-900 dark:text-white mb-1">{process.title}</h4>
+                        <p className="text-xs text-gray-600 dark:text-gray-400">
+                            {process.description}
+                        </p>
                     </div>
                 ))}
             </div>

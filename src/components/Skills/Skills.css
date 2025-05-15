@@ -1,0 +1,67 @@
+/* filepath: d:\Codes\Portfolio\src\components\Skills\Skills.css */
+.skills-container {
+  max-height: 330px;
+  overflow-y: auto;
+  padding-right: 5px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(59, 130, 246, 0.5) rgba(243, 244, 246, 0.1);
+}
+
+.skills-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.skills-container::-webkit-scrollbar-track {
+  background: rgba(243, 244, 246, 0.1);
+  border-radius: 4px;
+}
+
+.skills-container::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 4px;
+}
+
+.skills-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
+.skills-card {
+  transition: all 0.3s ease;
+}
+
+.skill-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  background-color: rgba(243, 244, 246, 0.2);
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.dark .skill-row {
+  background-color: rgba(55, 65, 81, 0.3);
+}
+
+.skill-row:hover {
+  background-color: rgba(243, 244, 246, 0.5);
+  transform: translateX(3px);
+  border-left: 3px solid #3b82f6;
+}
+
+.dark .skill-row:hover {
+  background-color: rgba(55, 65, 81, 0.5);
+  border-left: 3px solid #60a5fa;
+}
+
+.star {
+  font-size: 0.9rem;
+  margin-right: 2px;
+  transition: all 0.2s ease;
+}
+
+.skill-row:hover .star {
+  transform: scale(1.1);
+}

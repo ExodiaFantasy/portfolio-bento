@@ -1,10 +1,11 @@
-/* filepath: d:\Codes\Portfolio\src\components\Certifications\Certifications.css */
 /* Certifications component styles */
 .certifications-container {
   max-height: 400px;
   overflow-y: auto;
   padding-right: 6px;
   scroll-behavior: smooth;
+  width: 100%; 
+  gap: 16px;
 }
 
 /* Custom scrollbar styling */
@@ -41,4 +42,16 @@
 
 .dark .certification-item:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Add these new styles */
+.flex-col {
+  text-align: left;
+}
+
+.flex-col h4,
+.flex-col p {
+  margin-left: 0;
+  text-align: left;
+  width: 100%;
 }

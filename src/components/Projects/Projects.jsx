@@ -10,7 +10,7 @@ const Projects = () => {
             className="projects-card bg-gray-50 dark:bg-gray-900 p-6 rounded-xl"
         >            
             <div className="flex items-center justify-between mb-6">
-                <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100">🚀 Featured Projects</h3>
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100">Featured Projects</h3>
                 <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 text-xs rounded-full">Recent Work</span>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">                {projectsData.map((project, index) => (

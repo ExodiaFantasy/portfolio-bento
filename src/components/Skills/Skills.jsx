@@ -37,7 +37,7 @@ const Skills = () => {
             colSpan="col-span-12 md:col-span-4" 
             className="skills-card"
         >
-            <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">💻 Skills</h3>
+            <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">Skills</h3>
             
             <div className="skills-container pr-2">
                 <h4 className="font-medium text-gray-700 dark:text-gray-300 mb-3">Technical</h4>

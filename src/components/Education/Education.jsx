@@ -10,7 +10,7 @@ const Education = () => {
         <BentoCard 
             colSpan="col-span-12 md:col-span-4"
             className="education-card"
-        >            <h3 className="text-xl font-semibold mb-3 text-gray-800 dark:text-gray-100">🎓 Education</h3>
+        >            <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">Education</h3>
             <div className="space-y-3">
                 {educationData.map((item, index) => (
                     <div key={index} className="education-item p-2 bg-gray-50 dark:bg-gray-700 rounded-lg">

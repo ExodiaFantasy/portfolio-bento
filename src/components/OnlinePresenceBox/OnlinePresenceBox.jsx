@@ -38,7 +38,7 @@ const OnlinePresenceBox = () => {
             colSpan="col-span-12 md:col-span-6" 
             className="online-presence-card"
         >
-            <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">🌐 Online Presence</h3>            
+            <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">Online Presence</h3>            
             <div className="grid grid-cols-2 gap-3">
                 {platforms.map((platform, index) => (                    <a 
                         key={index}

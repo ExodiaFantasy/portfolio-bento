@@ -5,9 +5,8 @@ import { projects as projectsData } from '../../data/projects';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Projects = () => {
-    return (
-        <BentoCard 
-            colSpan="col-span-12 md:col-span-6" 
+    return (        <BentoCard 
+            colSpan="col-span-12 md:col-span-3" 
             className="projects-card"
         >
             <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">🚀 Featured Projects</h3>

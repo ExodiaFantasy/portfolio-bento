@@ -35,9 +35,8 @@ const OnlinePresenceBox = () => {
         }
     ];
 
-    return (
-        <BentoCard 
-            colSpan="col-span-12 md:col-span-4" 
+    return (        <BentoCard 
+            colSpan="col-span-12 md:col-span-3" 
             className="online-presence-card"
         >
             <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">🌐 Online Presence</h3>

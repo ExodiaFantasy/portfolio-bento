@@ -6,9 +6,8 @@ import { certifications as certificationsData } from '../../data/certifications'
 import './Certifications.css';
 
 const Certifications = () => {
-    return (
-        <BentoCard 
-            colSpan="col-span-12 md:col-span-4" 
+    return (        <BentoCard 
+            colSpan="col-span-12 md:col-span-6" 
             className="certifications-card"
         >
             <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">🎓 Certifications</h3>

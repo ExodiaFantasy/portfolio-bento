@@ -32,9 +32,8 @@ const WorkProcessBox = () => {
         }
     ];
 
-    return (
-        <BentoCard 
-            colSpan="col-span-12 md:col-span-4" 
+    return (        <BentoCard 
+            colSpan="col-span-12 md:col-span-3" 
             className="process-card"
         >
             <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">⚙️ Work Process</h3>

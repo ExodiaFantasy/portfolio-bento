@@ -51,9 +51,9 @@ const App = () => {
                     {/* Second row */}
                     <Certifications />
                     <Skills />
-                    <Projects />
 
                     {/* Third row */}
+                    <Projects />
                     <WorkProcessBox />
                     <OnlinePresenceBox />
                     <CallToActionBox />

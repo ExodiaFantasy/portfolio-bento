@@ -35,12 +35,14 @@ const Hero = () => {
           <h2 className="text-2xl md:text-3xl font-medium text-gray-700 dark:text-gray-300 mb-6">
             Cloud &amp; AI Engineer
           </h2>
-          
+            <div className="w-full flex justify-center">
+
           <p className="text-lg max-w-2xl text-gray-600 dark:text-gray-400 mb-10 text-center">
             Building the future with scalable cloud infrastructure and intelligent systems.
-            Specializing in AWS, ML/AI, and Data Analytics.
+            Specializing in AWS, Azure, ML/AI, and data engineering.
           </p>          
-          <div className="flex flex-wrap justify-center gap-4">            
+          </div>
+          <div className="flex flex-wrap justify-center gap-4">           
             <a 
               href="/resume.pdf" 
               download="John_Doe_Resume.pdf"

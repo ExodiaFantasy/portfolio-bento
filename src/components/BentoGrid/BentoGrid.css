@@ -1,0 +1,9 @@
+.bento-grid-container {
+    padding-bottom: 4rem;
+}
+
+@media (min-width: 640px) {
+    .bento-grid {
+        grid-auto-rows: minmax(100px, auto);
+    }
+}

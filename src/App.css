@@ -1,0 +1,41 @@
+:root {
+  --background-color: #ffffff;
+  --text-color: #1f2937;
+  --card-bg: #f9fafb;
+  --card-border: #e5e7eb;
+}
+
+.dark {
+  --background-color: #111827;
+  --text-color: #f3f4f6;
+  --card-bg: #1f2937;
+  --card-border: #374151;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.App {
+  text-align: center;
+}
+
+.bento-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

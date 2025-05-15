@@ -1,0 +1,22 @@
+/* filepath: d:\Codes\Portfolio\src\styles\tailwind.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom classes can go here */
+.bento-card {
+  @apply transition duration-300 ease-in-out;
+}
+
+.bento-card:hover {
+  @apply shadow-lg transform -translate-y-1;
+}
+
+/* Dark mode specific styles */
+.dark .bento-card:not(.gradient-card) {
+  @apply bg-gray-800 text-white;
+}
+
+.gradient-card {
+  @apply text-white;
+}

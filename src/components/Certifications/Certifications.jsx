@@ -1,0 +1,53 @@
+// filepath: d:\Codes\Portfolio\src\components\Certifications\Certifications.jsx
+import React from 'react';
+import BentoCard from '../BentoCard/BentoCard.jsx';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { certifications as certificationsData } from '../../data/certifications';
+import './Certifications.css';
+
+const Certifications = () => {
+    return (
+        <BentoCard 
+            colSpan="col-span-12 md:col-span-4" 
+            className="certifications-card"
+        >
+            <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">🎓 Certifications</h3>
+
+            <div className="certifications-container space-y-4">
+                {certificationsData.map((cert, index) => (
+                    <div 
+                        key={index} 
+                        className="p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 transition-all hover:shadow-md hover:-translate-y-1"
+                    >
+                        <div className="flex items-center justify-between">
+                            <div>
+                                <h4 className="text-gray-900 dark:text-gray-100 font-medium">{cert.title}</h4>
+                                <p className="text-sm text-gray-600 dark:text-gray-300">{cert.issuer}</p>
+                                <p className="text-xs text-gray-500 dark:text-gray-400">{cert.year}</p>
+                            </div>
+                            <FontAwesomeIcon 
+                                icon="certificate" 
+                                className="h-10 w-10 text-blue-500 object-contain filter dark:brightness-90"
+                            />
+                        </div>
+                        {cert.proof && (
+                            <a 
+                                href={cert.proof}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="mt-2 text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 flex items-center gap-1"
+                            >
+                                View Credential
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </a>
+                        )}
+                    </div>
+                ))}
+            </div>
+        </BentoCard>
+    );
+};
+
+export default Certifications;

@@ -1,0 +1,70 @@
+/* Certifications component styles */
+.certifications-container {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 6px;
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar styling */
+.certifications-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.certifications-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.certifications-container::-webkit-scrollbar-thumb {
+  background: rgba(113, 128, 150, 0.7);
+  border-radius: 10px;
+}
+
+.dark .certifications-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dark .certifications-container::-webkit-scrollbar-thumb {
+  background: rgba(160, 174, 192, 0.7);
+}
+
+.certification-item {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.certification-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark .certification-item:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Removed redundant @apply rules as Tailwind classes are used directly in JSX */
+/*
+.certification-card {
+    @apply p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 transition-all;
+}
+
+.certification-card:hover {
+    @apply shadow-md transform -translate-y-1;
+}
+
+.certification-title {
+    @apply text-gray-900 dark:text-gray-100 font-medium;
+}
+
+.certification-issuer {
+    @apply text-sm text-gray-600 dark:text-gray-300;
+}
+
+.certification-date {
+    @apply text-xs text-gray-500 dark:text-gray-400;
+}
+
+.view-credential-btn {
+    @apply mt-2 text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 flex items-center gap-1;
+}
+*/

@@ -1,0 +1,23 @@
+/* filepath: d:\Codes\Portfolio\src\components\ClientsBox\ClientsBox.css */
+.clients-logo {
+  max-width: 100%;
+  max-height: 40px;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.clients-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.dark .clients-logo {
+  filter: grayscale(100%) brightness(0.8) invert(0.8);
+  opacity: 0.6;
+}
+
+.dark .clients-logo:hover {
+  filter: grayscale(0%) brightness(0.8) invert(0.8);
+  opacity: 0.9;
+}

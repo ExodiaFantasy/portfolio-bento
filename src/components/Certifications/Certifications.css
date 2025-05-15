@@ -1,0 +1,44 @@
+/* filepath: d:\Codes\Portfolio\src\components\Certifications\Certifications.css */
+/* Certifications component styles */
+.certifications-container {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 6px;
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar styling */
+.certifications-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.certifications-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.certifications-container::-webkit-scrollbar-thumb {
+  background: rgba(113, 128, 150, 0.7);
+  border-radius: 10px;
+}
+
+.dark .certifications-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dark .certifications-container::-webkit-scrollbar-thumb {
+  background: rgba(160, 174, 192, 0.7);
+}
+
+.certification-item {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.certification-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark .certification-item:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}

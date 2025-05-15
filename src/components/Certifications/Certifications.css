@@ -57,13 +57,13 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Add these new styles */
-.flex-col {
+/* Add these new styles - scoping them to the certifications component */
+.certifications-container .flex-col {
   text-align: left;
 }
 
-.flex-col h4,
-.flex-col p {
+.certifications-container .flex-col h4,
+.certifications-container .flex-col p {
   margin-left: 0;
   text-align: left;
   width: 100%;

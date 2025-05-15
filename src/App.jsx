@@ -53,9 +53,10 @@ const App = () => {
                     <Skills />
                     
                     {/* Featured Projects Section */}
-                    <div className="col-span-12 mt-6 mb-2">
-                        <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200 border-b border-gray-200 dark:border-gray-700 pb-2">
-                            Featured Projects & Work
+                    <div className="col-span-12 mt-10 mb-6">
+                        <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200 border-b border-gray-200 dark:border-gray-700 pb-3 flex items-center">
+                            <span className="mr-2">💼</span>
+                            Featured Projects & Work Process
                         </h2>
                     </div>
                     <Projects />

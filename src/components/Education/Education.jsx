@@ -7,7 +7,7 @@ import { educationData } from '../../data/education';
 const Education = () => {
     return (
         <BentoCard 
-            colSpan="col-span-12 md:col-span-6"
+            colSpan="col-span-12 md:col-span-4"
             className="education-card"
         >
             <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">🎓 Education</h3>

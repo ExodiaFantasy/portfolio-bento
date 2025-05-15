@@ -44,7 +44,7 @@ const App = () => {
                     {/* First row */}
                     <StatsBox />
                     <BentoCard 
-                        colSpan="col-span-12 md:col-span-8" 
+                        colSpan="col-span-12 md:col-span-4" 
                         className="row-span-1"
                         gradient={true} 
                         gradientFrom="from-blue-500" 
@@ -58,19 +58,17 @@ const App = () => {
                             My approach combines technical expertise with business acumen to deliver impactful results.
                         </p>
                     </BentoCard>
+                    <Education />
 
                     {/* Second row */}
                     <Certifications />
                     <Skills />
+                    <Projects />
 
                     {/* Third row */}
                     <WorkProcessBox />
                     <OnlinePresenceBox />
                     <CallToActionBox />
-
-                    {/* Fourth Row */}
-                    <Education />
-                    <Projects />
                 </BentoGrid>
                 
                 {/* Footer */}

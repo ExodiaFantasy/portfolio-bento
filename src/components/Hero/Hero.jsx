@@ -18,19 +18,12 @@ const Hero = () => {
           <p className="text-lg max-w-2xl text-gray-600 dark:text-gray-400 mb-10">
             Building the future with scalable cloud infrastructure and intelligent systems.
             Specializing in AWS, Azure, ML/AI, and data engineering.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">            <a 
-              href="/resume.pdf" 
-              download="John_Doe_Resume.pdf"
-              className="py-3 px-8 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-md transition-all transform hover:-translate-y-1 hover:shadow-lg flex items-center justify-center gap-2"
-            >
-              <i className="fas fa-download mr-2"></i>
-              Download CV
-            </a>
+          </p>          <div className="flex flex-wrap justify-center gap-4">
             <a 
               href="#contact" 
-              className="py-3 px-8 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-white rounded-lg shadow-md transition-all transform hover:-translate-y-1 hover:shadow-lg"
+              className="py-3 px-8 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-md transition-all transform hover:-translate-y-1 hover:shadow-lg flex items-center justify-center gap-2"
             >
+              <i className="fas fa-envelope mr-2"></i>
               Contact Me
             </a>
           </div>

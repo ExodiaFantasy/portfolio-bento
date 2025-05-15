@@ -23,19 +23,7 @@ const App = () => {
                 <div className="fixed top-4 right-4 z-10">
                     <ThemeToggle />
                 </div>
-                
-                {/* Resume Download Button */}
-                <div className="fixed top-4 left-4 z-10">
-                    <a 
-                        href="/resume.pdf" 
-                        className="resume-btn flex items-center gap-2 py-2 px-4 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
-                    >
-                        <div className="download-icon-container">
-                            <FontAwesomeIcon icon="download" className="text-white" />
-                        </div>
-                        <span className="font-medium">Download CV</span>
-                    </a>
-                </div>
+
                 
                 <Hero />
                 
@@ -50,11 +38,11 @@ const App = () => {
                         gradientFrom="from-blue-500" 
                         gradientTo="to-purple-600"
                     >
-                        <h2 className="text-xl font-bold mb-2">About Me</h2>
-                        <p className="mb-2 text-sm">
+                        <h2 className="text-xl font-bold mb-2 text-white">About Me</h2>
+                        <p className="mb-2 text-sm text-blue-100">
                             I&apos;m a passionate Cloud/AI Engineer with over 5 years of experience building scalable cloud infrastructure and implementing machine learning solutions.
                         </p>
-                        <p className="text-sm">
+                        <p className="text-sm text-blue-100">
                             My approach combines technical expertise with business acumen to deliver impactful results.
                         </p>
                     </BentoCard>

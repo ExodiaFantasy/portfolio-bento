@@ -8,17 +8,34 @@ const Hero = () => {
     <div className="hero-container py-24 bg-gradient-to-br from-white to-gray-100 dark:from-gray-900 dark:to-gray-800">
       <div className="container mx-auto px-6">
         <div className="flex flex-col items-center text-center">
+          {/* Employment Status Indicator - change color as needed 
+          <div className="mb-2">
+            <span className="relative flex h-4 w-4 mx-auto">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-4 w-4 bg-green-500"></span>
+            </span>
+            <span className="employment-status" style={{ color: 'green', animation: 'blink 1s infinite' }}>Looking for Employment</span> */}
+                      <div className="mb-2">
+            <span className="relative flex h-4 w-4 mx-auto">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-4 w-4 bg-yellow-500"></span>
+              </span>
+            <span className="employment-status" style={{ color: 'orange', animation: 'blink 1s infinite' }}>Currently Employed</span>
+          </div>
+
+          
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-700">
-              John Doe
+              Elisha San Miguel
             </span>
           </h1>
           <h2 className="text-2xl md:text-3xl font-medium text-gray-700 dark:text-gray-300 mb-6">
             Cloud &amp; AI Engineer
           </h2>
+          
           <p className="text-lg max-w-2xl text-gray-600 dark:text-gray-400 mb-10 text-center">
             Building the future with scalable cloud infrastructure and intelligent systems.
-            Specializing in AWS, Azure, ML/AI, and data engineering.
+            Specializing in AWS, ML/AI, and Data Analytics.
           </p>          
           <div className="flex flex-wrap justify-center gap-4">            
             <a 

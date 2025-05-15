@@ -4,24 +4,27 @@ import './Hero.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Hero = () => {
-  return (
-    <div className="hero-container py-24 bg-gradient-to-br from-white to-gray-100 dark:from-gray-900 dark:to-gray-800">
-      <div className="container mx-auto px-6">
+  return (    <div className="hero-container py-24 bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative">
+      <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col items-center text-center">
-          {/* Employment Status Indicator - change color as needed 
-          <div className="mb-2">
-            <span className="relative flex h-4 w-4 mx-auto">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-4 w-4 bg-green-500"></span>
+          {/* Currently Employed Status */}
+          <div className="mb-4 bg-white/80 dark:bg-gray-800/80 rounded-full px-4 py-2 shadow-lg backdrop-blur-sm">
+            <span className="relative flex h-3 w-3 mx-auto mb-1">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
             </span>
-            <span className="employment-status" style={{ color: 'green', animation: 'blink 1s infinite' }}>Looking for Employment</span> */}
-                      <div className="mb-2">
-            <span className="relative flex h-4 w-4 mx-auto">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-4 w-4 bg-yellow-500"></span>
-              </span>
-            <span className="employment-status" style={{ color: 'orange', animation: 'blink 1s infinite' }}>Currently Employed</span>
+            <span className="employment-status font-medium text-blue-600 dark:text-blue-400">Currently Employed</span>
           </div>
+
+          {/* Looking for Employment Status - Uncomment to switch
+          <div className="mb-4 bg-white/80 dark:bg-gray-800/80 rounded-full px-4 py-2 shadow-lg backdrop-blur-sm">
+            <span className="relative flex h-3 w-3 mx-auto mb-1">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+            </span>
+            <span className="employment-status font-medium text-emerald-600 dark:text-emerald-400">Looking for Employment</span>
+          </div>
+          */}
 
           
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4">

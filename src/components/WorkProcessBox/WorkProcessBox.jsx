@@ -30,18 +30,15 @@ const WorkProcessBox = () => {
             description: "Fine-tuning for optimal performance",
             icon: "server"
         }
-    ];
-
-    return (        <BentoCard 
-            colSpan="col-span-12 md:col-span-3" 
+    ];    return (        <BentoCard 
+            colSpan="col-span-12 md:col-span-6" 
             className="process-card"
-        >
-            <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">⚙️ Work Process</h3>
-            
-            <div className="grid grid-cols-2 gap-4">
-                {processes.map(process => (                    <div 
+        >            <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">⚙️ Work Process</h3>            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {processes.map((process, index) => (                    <div 
                         key={process.id} 
-                        className="process-item flex flex-col items-center text-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg"
+                        className="process-item flex flex-col items-center text-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:shadow-md transition-all"
+                        style={{ animationDelay: `${index * 0.1}s` }}
                     >
                         <div className="process-icon w-12 h-12 mb-3 rounded-full flex items-center justify-center">
                             <FontAwesomeIcon 

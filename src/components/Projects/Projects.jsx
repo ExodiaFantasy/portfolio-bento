@@ -6,14 +6,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Projects = () => {
     return (        <BentoCard 
-            colSpan="col-span-12 md:col-span-3" 
+            colSpan="col-span-12 md:col-span-6" 
             className="projects-card"
-        >
-            <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">🚀 Featured Projects</h3>
-            
-            <div className="space-y-4">
+        >            <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">🚀 Featured Projects</h3>            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {projectsData.map((project, index) => (
-                    <div key={index} className="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                    <div key={index} className="p-5 bg-gray-50 dark:bg-gray-700 rounded-lg hover:shadow-lg transition-all transform hover:-translate-y-1 border border-gray-200 dark:border-gray-600">
                         <div className="flex justify-between items-start mb-2">                            <h4 className="font-medium text-gray-900 dark:text-white">{project.title}</h4>
                             <div className="flex space-x-2">
                                 {project.link && (

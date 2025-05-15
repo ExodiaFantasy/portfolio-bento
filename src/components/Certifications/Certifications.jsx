@@ -12,7 +12,7 @@ const Certifications = () => {
         >
             <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">🎓 Certifications</h3>
 
-            <div className="certifications-container space-y-4">
+            <div className="certifications-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {certificationsData.map((cert, index) => (
                     <div 
                         key={index} 

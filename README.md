@@ -2,27 +2,46 @@
 
 This portfolio is built with React and Tailwind CSS. To make changes to your portfolio, refer to the following key files and sections:
 
-## Where to Edit
+## 📂 Quick Edit Guide (Direct Content)
 
-- **Hero Section (Name, Title, Status, Description):**
-  - `src/components/Hero/Hero.jsx`
-- **About Me Section:**
-  - `src/App.jsx` (look for the About Me BentoCard)
-- **Stats, Skills, Certifications, Education:**
-  - `src/components/StatsBox/StatsBox.jsx`
-  - `src/components/Skills/Skills.jsx`
-  - `src/components/Certifications/Certifications.jsx`
-  - `src/components/Education/Education.jsx`
-- **Featured Projects:**
-  - `src/data/projects.js` (add or remove projects)
-  - `src/components/Projects/Projects.jsx` (UI logic)
-- **Work Process:**
-  - `src/components/WorkProcessBox/WorkProcessBox.jsx`
-- **Online Presence:**
-  - `src/components/OnlinePresenceBox/OnlinePresenceBox.jsx`
-- **Theme/Colors/Global Styles:**
-  - `src/styles/global.css`
-  - `tailwind.config.js`
+For 90% of your updates, you only need to edit the files in the `src/data/` directory.
+
+- **Projects / Engagements:** 
+  - File: `src/data/projects.js`
+  - *Note: Set `link: null` for projects that don't have a public website.*
+- **Technical Skills:** 
+  - File: `src/data/skills.js`
+- **Digital Footprint (Social Links):**
+  - File: `src/components/OnlinePresenceBox/OnlinePresenceBox.jsx`
+- **Certifications (Hybrid System):** 
+  - File: `src/data/certifications.js`
+  - *Internal Logic: The portfolio automatically syncs with your **Credly profile** (user: `elishasanmiguel`). If a certificate is on Credly, it will automatically pull the image and verification link. Use this file for **manual/non-Credly** certificates; they will be merged with the dynamic ones.*
+- **Education:** 
+  - File: `src/data/education.js`
+
+## 🛠️ Component & UI Logic
+
+If you want to change the **Layout** or **Static Text**:
+
+- **Hero Section (Name, Title, iCXeed Link, Resume Link):**
+  - Path: `src/components/Hero/Hero.jsx`
+- **Executive Summary & Dashboard Headers:**
+  - Path: `src/App.jsx`
+- **Work Process / SOP:**
+  - Path: `src/components/WorkProcessBox/WorkProcessBox.jsx`
+- **Global Theme & Variables (Colors, Spacing):**
+  - Path: `src/styles/variables.css`
+  - Path: `tailwind.config.js`
+
+## 🌐 Site Metadata (Title & Favicon)
+
+- **Page Title:**
+  - Edit the `<title>` tag in `public/index.html`. 
+  - *Current: "Elisha San Miguel | AI & Cloud Architect"*
+- **Favicon:**
+  - Replace the `favicon.ico` file in the `public/` folder with your own icon.
+  - If you use a `.png` or `.svg`, update the `<link rel="icon">` tag in `public/index.html`.
+
 
 ## How to Add Projects
 - Edit `src/data/projects.js` and add objects to the exported array. Each project should have a `title`, `description`, `technologies`, and optionally a `link`.

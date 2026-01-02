@@ -36,7 +36,7 @@
 .skill-row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 10px 12px;
   margin-bottom: 8px;
   border-radius: 8px;

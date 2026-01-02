@@ -1,22 +1,21 @@
 .bento-card {
-    border: 1px solid rgba(228, 228, 231, 0.5);
+    border-color: #000;
 }
 
-.dark .bento-card:not([class*="bg-gradient"]) {
-    border-color: rgba(63, 63, 70, 0.5);
+.dark .bento-card {
+    border-color: #fff;
 }
 
-/* For cards with a gradient background */
-.bento-card[class*="bg-gradient"] {
-    border: none;
-}
-
-/* Card hover effect */
+/* Very subtle hover effect for a technical feel */
 .bento-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    background-color: #fafafa;
 }
 
 .dark .bento-card:hover {
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+    background-color: #111;
+}
+
+/* Remove old bento effects */
+.bento-card[class*="bg-gradient"] {
+    border: 1px solid #000;
 }

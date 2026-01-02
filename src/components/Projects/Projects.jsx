@@ -1,63 +1,144 @@
-// filepath: d:\Codes\Portfolio\src\components\Projects\Projects.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import BentoCard from '../BentoCard/BentoCard.jsx';
 import { projects as projectsData } from '../../data/projects';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Projects.css';
 
 const Projects = () => {
+    const [selectedProject, setSelectedProject] = useState(null);
+
+    const closeModal = () => setSelectedProject(null);
+
     return (
         <BentoCard
             colSpan="col-span-12 md:col-span-6"
-            className="projects-card bg-gray-50 dark:bg-gray-900 p-6 rounded-xl"
+            className="projects-card"
         >
-            <div className="flex items-center justify-between mb-6">
-                <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100">Featured Projects</h3>
-                <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 text-xs rounded-full">Recent Work</span>
+            <div className="flex items-center justify-between mb-6 border-b border-black dark:border-white pb-4">
+                <h3 className="text-sm font-bold uppercase tracking-widest">Technical Engagements</h3>
+                <span className="text-[10px] uppercase tracking-tighter opacity-50">Enterprise / Internal</span>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {projectsData.length === 0 ? (
-                    <div className="col-span-2 flex flex-col items-center justify-center min-h-[220px] w-full">
-                        <svg className="animate-bounce mb-6" width="64" height="64" fill="none" viewBox="0 0 64 64">
-                          <circle cx="32" cy="32" r="28" stroke="#3b82f6" strokeWidth="6" fill="#eff6ff" />
-                          <path d="M32 22v16" stroke="#3b82f6" strokeWidth="4" strokeLinecap="round"/>
-                          <circle cx="32" cy="44" r="3" fill="#3b82f6"/>
-                        </svg>
-                        <span className="text-blue-600 dark:text-blue-400 text-xl font-bold mb-2 text-center">To be added..</span>
-                        <span className="text-white-400 dark:text-white-300 text-base text-center">Featured projects will appear here soon.</span>
-                    </div>
-                ) : (
-                    projectsData.map((project, index) => (
-                        <div
-                            key={index}
-                            className="project-item p-5 bg-white dark:bg-gray-800 rounded-lg hover:shadow-lg transition-all transform hover:-translate-y-1 border border-gray-200 dark:border-gray-700"
-                            style={{ animationDelay: `${index * 0.1}s` }}>
-                            <div className="flex justify-between items-start mb-3">
-                                <h4 className="font-medium text-gray-900 dark:text-white text-lg">{project.title}</h4>
-                                <div className="flex space-x-2">
-                                    {project.link && (
-                                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="external-link text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 bg-blue-50 dark:bg-blue-900/30 p-1.5 rounded-full w-7 h-7 flex items-center justify-center">
-                                            <FontAwesomeIcon icon="external-link-alt" size="sm" />
-                                        </a>
-                                    )}
+
+            <div className="max-h-[380px] overflow-y-auto pr-2 custom-scrollbar">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {projectsData.length === 0 ? (
+                        <div className="col-span-2 flex flex-col items-start justify-center min-h-[200px] w-full border border-dashed border-black/20 dark:border-white/20 p-8">
+                            <span className="text-black dark:text-white text-sm font-medium mb-1 tracking-tight">NULL_ARRAY</span>
+                            <span className="text-black/40 dark:text-white/40 text-xs">Awaiting deployment documentation.</span>
+                        </div>
+                    ) : (
+                        projectsData.map((project, index) => (
+                            <div
+                                key={index}
+                                className="project-item min-h-[240px] p-5 border border-black dark:border-white flex flex-col justify-between"
+                            >
+                                <div className="flex flex-col flex-grow">
+                                    <div className="mb-3 h-[50px] flex items-start">
+                                        <h4 className="font-bold text-black dark:text-white text-[13px] uppercase leading-tight tracking-tighter line-clamp-2">
+                                            {project.title}
+                                        </h4>
+                                    </div>
+
+                                    <div className="mb-4 h-[45px]">
+                                        <p className="text-[10px] text-black/70 dark:text-white/70 leading-relaxed line-clamp-2">
+                                            {project.description}
+                                        </p>
+                                    </div>
+
+                                    <div className="mb-4">
+                                        <button
+                                            onClick={() => setSelectedProject(project)}
+                                            className="text-[9px] uppercase font-bold tracking-widest border-b border-black dark:border-white hover:opacity-50 transition-opacity"
+                                        >
+                                            [ Read Dossier ]
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div className="pt-3 border-t border-black/10 dark:border-white/10">
+                                    <div className="flex flex-wrap gap-2 text-[8px] uppercase tracking-tighter opacity-40 font-mono">
+                                        {project.technologies.slice(0, 3).map((tech, i) => (
+                                            <span key={i}>#{tech}</span>
+                                        ))}
+                                        {project.technologies.length > 3 && <span>...</span>}
+                                    </div>
                                 </div>
                             </div>
-                            <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
-                            <div className="w-12 h-1 bg-blue-500 rounded mb-4"></div>
-                            <div className="flex flex-wrap gap-2">
-                                {project.technologies.map((tech, techIndex) => (
-                                    <span
-                                        key={techIndex}
-                                        className="tech-tag text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full border border-gray-200 dark:border-gray-600"
-                                    >
-                                        {tech}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-                    ))
-                )}
+                        ))
+                    )}
+                </div>
             </div>
+
+            {/* Technical Dossier Modal */}
+            {selectedProject && (
+                <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-white/10 dark:bg-black/40 backdrop-blur-md animate-fadeIn">
+                    <div
+                        className="bg-neutral-50 dark:bg-[#0a0a0a] border border-black dark:border-white w-full max-w-2xl p-8 md:p-12 relative overflow-hidden flex flex-col"
+                    >
+                        {/* Static noise-like frame element */}
+                        <div className="absolute top-0 right-0 p-4 opacity-10 font-mono text-[8px] select-none uppercase">
+                            Ref_Ext_Dossier_{selectedProject.id}
+                        </div>
+
+                        <div className="flex justify-between items-start mb-10 border-b border-black dark:border-white pb-6">
+                            <div>
+                                <span className="text-[10px] uppercase tracking-[0.3em] opacity-50 block mb-2 font-bold">Project Engagement // Detail</span>
+                                <h3 className="text-3xl md:text-4xl font-bold uppercase tracking-tighter leading-none">{selectedProject.title}</h3>
+                            </div>
+                            <button
+                                onClick={closeModal}
+                                className="h-10 w-10 border border-black dark:border-white flex items-center justify-center hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-all"
+                            >
+                                <span className="text-lg">×</span>
+                            </button>
+                        </div>
+
+                        <div className="flex-grow space-y-8 overflow-y-auto custom-scrollbar pr-4">
+                            <div>
+                                <h4 className="text-[10px] uppercase tracking-widest font-bold mb-4 opacity-40 text-black dark:text-white border-l-2 border-black dark:border-white pl-3">Executive Overview</h4>
+                                <p className="text-sm md:text-base leading-relaxed opacity-80 text-black dark:text-white">
+                                    {selectedProject.description}
+                                </p>
+                            </div>
+
+                            <div>
+                                <h4 className="text-[10px] uppercase tracking-widest font-bold mb-4 opacity-40 text-black dark:text-white border-l-2 border-black dark:border-white pl-3">Technical Stack</h4>
+                                <div className="flex flex-wrap gap-3">
+                                    {selectedProject.technologies.map((tech, i) => (
+                                        <span key={i} className="px-3 py-1 border border-black/20 dark:border-white/20 text-[10px] uppercase font-mono">
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {selectedProject.link && (
+                                <div>
+                                    <h4 className="text-[10px] uppercase tracking-widest font-bold mb-4 opacity-40 text-black dark:text-white border-l-2 border-black dark:border-white pl-3">Access Portal</h4>
+                                    <a
+                                        href={selectedProject.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-block px-6 py-3 bg-black dark:bg-white text-white dark:text-black text-[10px] font-bold uppercase tracking-widest hover:opacity-80 transition-opacity"
+                                    >
+                                        Visit Engagement Site
+                                    </a>
+                                </div>
+                            )}
+                        </div>
+
+                        <div className="mt-10 pt-6 border-t border-black/10 dark:border-white/10 flex justify-between items-center">
+                            <span className="text-[8px] font-mono opacity-30 uppercase tracking-widest">Auth_Token: Verified_Access</span>
+                            <button
+                                onClick={closeModal}
+                                className="text-[10px] uppercase font-bold tracking-widest opacity-60 hover:opacity-100 transition-opacity underline underline-offset-4"
+                            >
+                                Close Terminal
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </BentoCard>
     );
 };

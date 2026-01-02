@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" fill="none"/>
+  <!-- Central Neural Node -->
+  <rect x="12" y="12" width="8" height="8" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+  <!-- Connection Paths -->
+  <path d="M16 4V12M16 20V28M4 16H12M20 16H28" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+  <!-- Peripheral Terminals -->
+  <rect x="14" y="2" width="4" height="4" fill="currentColor"/>
+  <rect x="14" y="26" width="4" height="4" fill="currentColor"/>
+  <rect x="2" y="14" width="4" height="4" fill="currentColor"/>
+  <rect x="26" y="14" width="4" height="4" fill="currentColor"/>
+</svg>

@@ -1,38 +1,26 @@
 export const certifications = [
     {
-        title: "AWS Solutions Architect Professional",
+        title: "AWS Certified AI Practitioner (Early Adopter)",
         issuer: "Amazon Web Services",
-        year: 2023,
-        proof: "/certificates/aws-sap.pdf"
+        year: 2025,
+        proof: "https://www.credly.com/badges/aa4e9d36-bd04-45dd-bad7-1803e39a6aea/public_url"
     },
     {
-        title: "Google Cloud Professional Data Engineer",
-        issuer: "Google Cloud",
-        year: 2022,
-        proof: "/certificates/gcp-data-engineer.pdf"
+        title: "AWS Certified AI Practitioner",
+        issuer: "Amazon Web Services",
+        year: 2025,
+        proof: "https://www.credly.com/badges/31c32933-5e24-431f-ba63-8e5c9e41c3df/public_url"
     },
     {
-        title: "Microsoft Certified: Azure AI Engineer",
-        issuer: "Microsoft",
-        year: 2022,
-        proof: "/certificates/azure-ai.pdf"
+        title: "Amazon Connect Developer & Communication Specialist",
+        issuer: "Amazon Web Services Inc.",
+        year: 2024,
+        proof: "#"
     },
     {
-        title: "Certified Kubernetes Administrator (CKA)",
-        issuer: "CNCF",
-        year: 2021,
-        proof: "/certificates/cka.pdf"
-    },
-    {
-        title: "TensorFlow Developer Certificate",
-        issuer: "Google",
-        year: 2020,
-        proof: "/certificates/tensorflow-dev.pdf"
-    },
-    {
-        title: "HashiCorp Certified Terraform Associate",
-        issuer: "HashiCorp",
-        year: 2021,
-        proof: "/certificates/terraform.pdf"
+        title: "AWS Certified Cloud Practitioner",
+        issuer: "Amazon Web Services",
+        year: 2024,
+        proof: "#"
     }
 ];

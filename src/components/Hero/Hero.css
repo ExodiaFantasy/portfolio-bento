@@ -7,45 +7,10 @@
   overflow: hidden;
 }
 
-.hero-container::before {
-  content: '';
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: linear-gradient(to right, rgba(59, 130, 246, 0.1), rgba(99, 102, 241, 0.1));
-  top: -100px;
-  right: -100px;
-  z-index: 0;
-}
-
-.hero-container::after {
-  content: '';
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: linear-gradient(to right, rgba(59, 130, 246, 0.1), rgba(99, 102, 241, 0.1));
-  bottom: -50px;
-  left: -50px;
-  z-index: 0;
-}
-
-html.dark .hero-container::before,
-html.dark .hero-container::after {
-  background: linear-gradient(to right, rgba(59, 130, 246, 0.05), rgba(99, 102, 241, 0.05));
-}
-
-.hero-container .container {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-}
-
 .hero-container p {
-  margin-left: auto;
+  margin-left: 0;
   margin-right: auto;
   max-width: 65ch;
   line-height: 1.75;
-  text-align: center;
+  text-align: left;
 }

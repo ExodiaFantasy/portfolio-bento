@@ -18,62 +18,63 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const App = () => {
     return (
         <ThemeProvider>
-            <div className="App min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+            <div className="App min-h-screen bg-neutral-50 dark:bg-[#0a0a0a] text-neutral-900 dark:text-neutral-100 transition-colors duration-200">
                 {/* Theme Toggle Button */}
-                <div className="fixed top-4 right-4 z-10">
+                <div className="fixed top-8 right-8 z-50">
                     <ThemeToggle />
                 </div>
 
-                
                 <Hero />
-                
-                
+
                 <BentoGrid>
                     {/* First row */}
-                    <StatsBox />
-                    <BentoCard 
-                        colSpan="col-span-12 md:col-span-4" 
-                        className="row-span-1"
-                        gradient={true} 
-                        gradientFrom="from-blue-500" 
-                        gradientTo="to-purple-600"
+                    <div className="col-span-12 mb-4 opacity-60">
+                        <span className="text-[10px] uppercase tracking-[0.3em] font-bold">Core Profile // 01</span>
+                    </div>
+                    <BentoCard
+                        colSpan="col-span-12 md:col-span-8"
+                        className="row-span-1 !border-2"
                     >
-                        <h2 className="text-xl font-bold mb-2 text-white">About Me</h2>
-                        <p className="mb-2 text-sm text-blue-100">
-                            I&apos;m a passionate Cloud/AI Engineer with over 5 years of experience building scalable cloud infrastructure and implementing machine learning solutions.
-                        </p>
-                        <p className="text-sm text-blue-100">
-                            My approach combines technical expertise with business acumen to deliver impactful results.
-                        </p>
+                        <div className="flex items-center justify-between mb-8 border-b border-black dark:border-white pb-4">
+                            <h3 className="text-sm font-bold uppercase tracking-widest">Strategic Overview</h3>
+                            <span className="text-[10px] uppercase tracking-tighter opacity-50">AI & Cloud Architecture</span>
+                        </div>
+                        <div className="space-y-4 text-xs leading-loose text-black dark:text-neutral-300">
+                            <p>
+                                I tackle <span className="font-bold">business complexity</span> head-on by designing <span className="font-bold">adaptive solutions</span>. Whether building context-aware systems or embedding the latest technology, I ensure <span className="font-bold">security, compliance, and performance</span> aren&apos;t just boxes to tick but standards to exceed.
+                            </p>
+                            <p>
+                                By combining expertise in <span className="font-bold">advanced AI with AWS</span>, I deliver <span className="font-bold">measurable results</span> for enterprise clients: <span className="font-bold">eliminating repetitive tasks</span>, <span className="font-bold">reducing handle time</span>, and ensuring <span className="font-bold">24/7 support</span>. A commitment to <span className="font-bold">problem-solving and critical thinking</span> unlocks smarter, more efficient ways of working with analytics, AI, and automation.
+                            </p>
+                        </div>
                     </BentoCard>
                     <Education />
 
                     {/* Second row */}
+                    <div className="col-span-12 mt-12 mb-4 opacity-60">
+                        <span className="text-[10px] uppercase tracking-[0.3em] font-bold">Technical Matrix // 02</span>
+                    </div>
                     <Certifications />
                     <Skills />
-                    
+
                     {/* Featured Projects Section */}
-                    <div className="col-span-12 mt-10 mb-6">
-                        <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200 border-b border-gray-200 dark:border-gray-700 pb-3 flex items-center">
-                            Project Highlights & Workflow
-                        </h2>
+                    <div className="col-span-12 mt-12 mb-4 opacity-60">
+                        <span className="text-[10px] uppercase tracking-[0.3em] font-bold">Project Repository // 03</span>
                     </div>
                     <Projects />
                     <WorkProcessBox />
-                    
+
                     {/* Online Presence & Contact Section */}
-                    <div className="col-span-12 mt-6 mb-2">
-                        <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200 border-b border-gray-200 dark:border-gray-700 pb-2">
-                            Connect & Collaborate
-                        </h2>
+                    <div className="col-span-12 mt-12 mb-4 opacity-60">
+                        <span className="text-[10px] uppercase tracking-[0.3em] font-bold">Contact Protocol // 04</span>
                     </div>
                     <OnlinePresenceBox />
                     <CallToActionBox />
                 </BentoGrid>
-                
+
                 {/* Footer */}
-                <footer className="py-8 text-center text-gray-600 dark:text-gray-400">
-                    <p>© 2023 John Doe. All rights reserved.</p>
+                <footer className="py-20 text-center border-t border-black/10 dark:border-white/10 mt-20">
+                    <p className="text-[10px] uppercase tracking-widest opacity-40">© 2026 ELISHA SAN MIGUEL // SYSTEM_ALL_RIGHTS_RESERVED</p>
                 </footer>
             </div>
         </ThemeProvider>

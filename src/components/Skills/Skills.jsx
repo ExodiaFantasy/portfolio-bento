@@ -7,46 +7,35 @@ const Skills = () => {
     // Group skills by category
     const technicalSkills = skillsData.filter((_, index) => index < 8);
     const professionalSkills = skillsData.filter((_, index) => index >= 8);
-      const renderStars = (level) => {
-        const maxStars = 5;
-        return (
-            <div className="flex">
-                {[...Array(maxStars)].map((_, i) => (
-                    <span 
-                        key={i} 
-                        className={`star ${i < level ? 'text-yellow-400' : 'text-gray-300 dark:text-gray-600'}`}
-                        style={{ animationDelay: `${i * 0.1}s` }}
-                    >
-                        ★
-                    </span>
+    const renderSkill = (skill, index) => (
+        <div key={index} className="skill-row border-b border-black/10 dark:border-white/10 last:border-0 py-4 flex items-start justify-between gap-4">
+            <span className="text-[11px] font-bold tracking-tight uppercase leading-tight flex-1 pr-2">{skill.name}</span>
+            <div className="flex space-x-1 pt-1 w-[90px] justify-end shrink-0">
+                {[...Array(5)].map((_, i) => (
+                    <div
+                        key={i}
+                        className={`h-1.5 w-3.5 ${i < skill.level ? 'bg-black dark:bg-white' : 'bg-black/10 dark:bg-white/10'}`}
+                    />
                 ))}
-            </div>
-        );
-    };
-      const renderSkill = (skill, index) => (
-        <div key={index} className="skill-row">
-            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{skill.name}</span>
-            <div className="flex items-center">
-                {renderStars(skill.level)}
             </div>
         </div>
     );
-    
+
     return (
-        <BentoCard 
-            colSpan="col-span-12 md:col-span-4" 
+        <BentoCard
+            colSpan="col-span-12 md:col-span-4"
             className="skills-card"
         >
-            <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">Skills</h3>
-            
+            <div className="flex items-center justify-between mb-8 border-b border-black dark:border-white pb-4">
+                <h3 className="text-sm font-bold uppercase tracking-widest">Technical Skills</h3>
+                <span className="text-[10px] uppercase tracking-tighter opacity-50">Stack // Proficiency</span>
+            </div>
             <div className="skills-container pr-2">
-                <h4 className="font-medium text-gray-700 dark:text-gray-300 mb-3">Technical</h4>
-                <div className="mb-6">
+                <div className="mb-0">
                     {technicalSkills.map(renderSkill)}
                 </div>
-                
-                <h4 className="font-medium text-gray-700 dark:text-gray-300 mb-3">Professional</h4>
-                <div>
+
+                <div className="mt-0">
                     {professionalSkills.map(renderSkill)}
                 </div>
             </div>

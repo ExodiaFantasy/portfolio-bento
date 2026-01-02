@@ -8,6 +8,7 @@
         opacity: 0;
         transform: translateY(10px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -34,4 +35,26 @@
 .dark .projects-card .tech-tag:hover {
     background-color: rgba(59, 130, 246, 0.3);
     color: #93c5fd;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(113, 128, 150, 0.7);
+    border-radius: 10px;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(160, 174, 192, 0.7);
 }

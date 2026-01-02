@@ -13,8 +13,7 @@ const StatsBox = () => {
 
     return (
         <BentoCard colSpan="col-span-12 md:col-span-4" className="row-span-1">
-            <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">Stats</h3>
-            <div className="stats-grid">
+            <div className="flex flex-col space-y-2">
                 {stats.map((stat, index) => (
                     <div key={index} className="stat-item">
                         <div className="stat-icon">

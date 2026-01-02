@@ -8,16 +8,14 @@ const ThemeToggle = () => {
     const { isDark, toggleTheme } = useContext(ThemeContext);
 
     return (
-        <button 
+        <button
             onClick={toggleTheme}
-            className="theme-toggle-btn"
+            className="h-12 w-12 border border-black dark:border-white flex items-center justify-center transition-all hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black group"
             aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
         >
-            {isDark ? (
-                <FontAwesomeIcon icon="sun" className="text-yellow-300" />
-            ) : (
-                <FontAwesomeIcon icon="moon" className="text-blue-600" />
-            )}
+            <span className="text-[10px] font-bold uppercase tracking-tighter">
+                {isDark ? "LGT" : "DRK"}
+            </span>
         </button>
     );
 };

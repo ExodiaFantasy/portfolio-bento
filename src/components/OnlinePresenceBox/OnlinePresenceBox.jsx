@@ -16,7 +16,7 @@ const OnlinePresenceBox = () => {
         },
         {
             name: "GitHub",
-            username: "ExodiaFantasy",
+            username: "elishasanmiguel",
             url: "https://github.com/ExodiaFantasy",
             icon: ["fab", "github"],
             color: "text-gray-800 dark:text-white"

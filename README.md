@@ -43,6 +43,16 @@ If you want to change the **Layout** or **Static Text**:
   - If you use a `.png` or `.svg`, update the `<link rel="icon">` tag in `public/index.html`.
 
 
+## 🔄 Automatic Dual-Remote Sync (GitHub & GitLab)
+
+I have configured the `origin` remote to push to **both** GitLab and GitHub simultaneously. This ensures your portfolio is always in sync across both platforms with a single command.
+
+- **Standard Git Command:**
+  - `git push origin main` (This now pushes to both GitLab and GitHub).
+- **One-Click Command:**
+  - `npm run sync`
+  - *Internal Logic: This command runs `git add .`, commits with a generic message, and pushes to both remotes.*
+
 ## How to Add Projects
 - Edit `src/data/projects.js` and add objects to the exported array. Each project should have a `title`, `description`, `technologies`, and optionally a `link`.
 
@@ -54,6 +64,7 @@ If you want to change the **Layout** or **Static Text**:
 ## How to Run/Build
 - Use `npm start` to run locally.
 - Use `npm run build` to build for production.
+- Use `npm run sync` to commit and push changes to both GitLab and GitHub.
 
 ## More
 - For new sections, add a new component in `src/components/` and import it in `src/App.jsx`.

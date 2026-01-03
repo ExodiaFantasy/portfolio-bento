@@ -58,3 +58,25 @@
 .dark .custom-scrollbar::-webkit-scrollbar-thumb {
     background: rgba(160, 174, 192, 0.7);
 }
+
+/* Media Gallery Styles */
+.project-media-container {
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.modal-nav-button {
+    backdrop-filter: blur(4px);
+    transition: all 0.2s ease;
+}
+
+.modal-nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+}
+
+.dark .modal-nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+}

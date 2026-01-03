@@ -6,8 +6,24 @@ import './Projects.css';
 
 const Projects = () => {
     const [selectedProject, setSelectedProject] = useState(null);
+    const [activeMediaIndex, setActiveMediaIndex] = useState(0);
 
-    const closeModal = () => setSelectedProject(null);
+    const closeModal = () => {
+        setSelectedProject(null);
+        setActiveMediaIndex(0);
+    };
+
+    const nextMedia = () => {
+        if (selectedProject?.media) {
+            setActiveMediaIndex((prev) => (prev + 1) % selectedProject.media.length);
+        }
+    };
+
+    const prevMedia = () => {
+        if (selectedProject?.media) {
+            setActiveMediaIndex((prev) => (prev - 1 + selectedProject.media.length) % selectedProject.media.length);
+        }
+    };
 
     return (
         <BentoCard
@@ -71,29 +87,81 @@ const Projects = () => {
 
             {/* Technical Dossier Modal */}
             {selectedProject && (
-                <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-white/10 dark:bg-black/40 backdrop-blur-md animate-fadeIn">
+                <div
+                    className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-white/10 dark:bg-black/40 backdrop-blur-md animate-fadeIn"
+                    onClick={closeModal}
+                    onKeyDown={(e) => e.key === 'Escape' && closeModal()}
+                    role="button"
+                    tabIndex="0"
+                >
                     <div
-                        className="bg-neutral-50 dark:bg-[#0a0a0a] border border-black dark:border-white w-full max-w-2xl p-8 md:p-12 relative overflow-hidden flex flex-col"
+                        className="bg-neutral-50 dark:bg-[#0a0a0a] border border-black dark:border-white w-full max-w-2xl max-h-[85vh] p-8 md:p-12 relative overflow-hidden flex flex-col"
+                        onClick={(e) => e.stopPropagation()}
+                        onKeyDown={(e) => e.stopPropagation()}
+                        role="presentation"
                     >
                         {/* Static noise-like frame element */}
                         <div className="absolute top-0 right-0 p-4 opacity-10 font-mono text-[8px] select-none uppercase">
                             Ref_Ext_Dossier_{selectedProject.id}
                         </div>
 
-                        <div className="flex justify-between items-start mb-10 border-b border-black dark:border-white pb-6">
-                            <div>
+                        <div className="flex justify-between items-start mb-10 border-b border-black dark:border-white pb-6 shrink-0">
+                            <div className="pr-4">
                                 <span className="text-[10px] uppercase tracking-[0.3em] opacity-50 block mb-2 font-bold">Project Engagement // Detail</span>
-                                <h3 className="text-3xl md:text-4xl font-bold uppercase tracking-tighter leading-none">{selectedProject.title}</h3>
+                                <h3 className="text-xl md:text-3xl font-bold uppercase tracking-tighter leading-none break-words">{selectedProject.title}</h3>
                             </div>
                             <button
                                 onClick={closeModal}
-                                className="h-10 w-10 border border-black dark:border-white flex items-center justify-center hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-all"
+                                className="h-10 w-10 shrink-0 border border-black dark:border-white flex items-center justify-center hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-all"
                             >
                                 <span className="text-lg">×</span>
                             </button>
                         </div>
 
                         <div className="flex-grow space-y-8 overflow-y-auto custom-scrollbar pr-4">
+                            {selectedProject.media && selectedProject.media.length > 0 && (
+                                <div className="space-y-4">
+                                    <h4 className="text-[10px] uppercase tracking-widest font-bold mb-4 opacity-40 text-black dark:text-white border-l-2 border-black dark:border-white pl-3">Visual Documentation</h4>
+
+                                    <div className="relative group bg-neutral-200 dark:bg-neutral-900 border border-black dark:border-white overflow-hidden aspect-video flex items-center justify-center">
+                                        <img
+                                            src={selectedProject.media[activeMediaIndex].url}
+                                            alt={selectedProject.media[activeMediaIndex].caption}
+                                            className="max-w-full max-h-full object-contain"
+                                        />
+
+                                        {selectedProject.media.length > 1 && (
+                                            <>
+                                                <button
+                                                    onClick={prevMedia}
+                                                    className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 dark:bg-black/80 w-8 h-8 flex items-center justify-center border border-black dark:border-white opacity-0 group-hover:opacity-100 transition-opacity modal-nav-button"
+                                                >
+                                                    ←
+                                                </button>
+                                                <button
+                                                    onClick={nextMedia}
+                                                    className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 dark:bg-black/80 w-8 h-8 flex items-center justify-center border border-black dark:border-white opacity-0 group-hover:opacity-100 transition-opacity modal-nav-button"
+                                                >
+                                                    →
+                                                </button>
+
+                                                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
+                                                    {selectedProject.media.map((_, i) => (
+                                                        <div
+                                                            key={i}
+                                                            className={`w-1.5 h-1.5 rounded-full ${i === activeMediaIndex ? 'bg-black dark:bg-white' : 'bg-black/20 dark:white/20'}`}
+                                                        />
+                                                    ))}
+                                                </div>
+                                            </>
+                                        )}
+                                    </div>
+                                    <p className="text-[9px] uppercase tracking-wider opacity-60 font-mono text-center">
+                                        {selectedProject.media[activeMediaIndex].caption} ({activeMediaIndex + 1}/{selectedProject.media.length})
+                                    </p>
+                                </div>
+                            )}
+
                             <div>
                                 <h4 className="text-[10px] uppercase tracking-widest font-bold mb-4 opacity-40 text-black dark:text-white border-l-2 border-black dark:border-white pl-3">Executive Overview</h4>
                                 <p className="text-sm md:text-base leading-relaxed opacity-80 text-black dark:text-white">
@@ -127,7 +195,7 @@ const Projects = () => {
                             )}
                         </div>
 
-                        <div className="mt-10 pt-6 border-t border-black/10 dark:border-white/10 flex justify-between items-center">
+                        <div className="mt-10 pt-6 border-t border-black/10 dark:border-white/10 flex justify-between items-center shrink-0">
                             <span className="text-[8px] font-mono opacity-30 uppercase tracking-widest">Auth_Token: Verified_Access</span>
                             <button
                                 onClick={closeModal}

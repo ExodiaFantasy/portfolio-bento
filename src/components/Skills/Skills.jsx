@@ -24,20 +24,27 @@ const Skills = () => {
     return (
         <BentoCard
             colSpan="col-span-12 md:col-span-4"
-            className="skills-card"
+            className="skills-card flex flex-col pb-0" // Removed fixed height
         >
             <div className="flex items-center justify-between mb-8 border-b border-black dark:border-white pb-4">
                 <h3 className="text-sm font-bold uppercase tracking-widest">Technical Skills</h3>
                 <span className="text-[10px] uppercase tracking-tighter opacity-50">Stack // Proficiency</span>
             </div>
-            <div className="skills-container pr-2">
-                <div className="mb-0">
+            <div className="skills-container pr-2 flex-1 overflow-y-auto"> {/* Removed height calculation */}
+                <div className="mb-0 space-y-4"> {/* Add spacing */}
                     {technicalSkills.map(renderSkill)}
                 </div>
-
-                <div className="mt-0">
+                <div className="mt-0 space-y-4"> {/* Add spacing */}
                     {professionalSkills.map(renderSkill)}
                 </div>
+            </div>
+            <div className="mt-auto border-t border-black/10 dark:border-white/10 pt-3 flex items-center justify-between">
+                <span className="text-[10px] uppercase tracking-widest font-bold text-black dark:text-white">
+                    Skills Total
+                </span>
+                <span className="text-[10px] uppercase tracking-tighter opacity-50">
+                    {skillsData.length}
+                </span>
             </div>
         </BentoCard>
     );

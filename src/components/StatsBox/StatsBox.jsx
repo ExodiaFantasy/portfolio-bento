@@ -1,14 +1,15 @@
 import React from 'react';
 import BentoCard from '../BentoCard/BentoCard.jsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { certifications } from '../../data/certifications';
 import './StatsBox.css';
 
 const StatsBox = () => {
     const stats = [
         { icon: 'code', label: 'Projects', value: '25+' },
-        { icon: 'users', label: 'Clients', value: '15+' },
-        { icon: 'star', label: 'Reviews', value: '4.9' },
-        { icon: 'clock', label: 'Experience', value: '5+ yrs' }
+        { icon: 'certificate', label: 'Certifications', value: String(certifications.length) },
+        { icon: 'clock', label: 'Experience', value: '5+ yrs' },
+        { icon: 'users', label: 'Clients', value: '15+' }
     ];
 
     return (

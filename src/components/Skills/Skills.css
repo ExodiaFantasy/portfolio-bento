@@ -1,6 +1,7 @@
 /* filepath: d:\Codes\Portfolio\src\components\Skills\Skills.css */
 .skills-container {
   max-height: 400px;
+  min-height: 0;
   overflow-y: auto;
   padding-right: 6px;
   scroll-behavior: smooth;
@@ -8,25 +9,32 @@
 
 /* Custom scrollbar styling - matching Certifications */
 .skills-container::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 
 .skills-container::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  background: transparent;
+  border-radius: 6px;
 }
 
 .skills-container::-webkit-scrollbar-thumb {
-  background: rgba(113, 128, 150, 0.7);
-  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
 }
 
 .dark .skills-container::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
+  background: transparent;
 }
 
 .dark .skills-container::-webkit-scrollbar-thumb {
-  background: rgba(160, 174, 192, 0.7);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+@supports (scrollbar-width: thin) {
+  .skills-container {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.08) transparent;
+  }
 }
 
 .skills-card {

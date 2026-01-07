@@ -16,6 +16,12 @@ For 90% of your updates, you only need to edit the files in the `src/data/` dire
 - **Certifications (Hybrid System):** 
   - File: `src/data/certifications.js`
   - *Internal Logic: The portfolio automatically syncs with your **Credly profile** (user: `elishasanmiguel`). If a certificate is on Credly, it will automatically pull the image and verification link. Use this file for **manual/non-Credly** certificates; they will be merged with the dynamic ones.*
+  - *Timeout: Update `const timeoutMs` in `src/components/Certifications/Certifications.jsx` to change the Credly fetch timeout (milliseconds).*
+  - *Archive list: Add extra certs to `certificationArchive` in `src/data/certifications.js` so they appear under the collapsible Archive list (duplicates are filtered).*
+  - *Files: Put PDFs/PNGs in `public/Certificates` and link with `proof: "/Certificates/your-file.pdf"`.*
+  - *Last sync label: Shows in the Certifications header after a successful Credly fetch (set in `src/components/Certifications/Certifications.jsx`).*
+  - *Cache duration: Update `const cacheTtlMs` in `src/components/Certifications/Certifications.jsx` (milliseconds).*
+  - *Refresh button: Remove or hide the `Refresh` button in `src/components/Certifications/Certifications.jsx` to disable manual refetching.*
 - **Education:** 
   - File: `src/data/education.js`
 

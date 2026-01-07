@@ -19,6 +19,7 @@ import {
   faCubes,
   faRobot,
   faCloud,
+  faArrowsRotate,
   faExternalLinkAlt
 } from '@fortawesome/free-solid-svg-icons';
 import { 
@@ -47,6 +48,7 @@ library.add(
   faCubes,
   faRobot,
   faCloud,
+  faArrowsRotate,
   faExternalLinkAlt,
   faLinkedinIn,
   faGithub,

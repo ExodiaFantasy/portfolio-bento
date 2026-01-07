@@ -21,5 +21,7 @@ export const skills = [
     { name: "System Design", level: 3 },
     { name: "UI/UX Design", level: 3 },
     { name: "Node.js", level: 2 },
-    { name: "Python", level: 5 }
+    { name: "Python", level: 5 },
+    { name: "Data Analytics", level: 4 },
+    { name: "Cybersecurity", level: 3 }
 ];

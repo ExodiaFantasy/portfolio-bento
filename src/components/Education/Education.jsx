@@ -1,7 +1,6 @@
 // filepath: d:\Codes\Portfolio\src\components\Education\Education.jsx
 import React from 'react';
 import BentoCard from '../BentoCard/BentoCard.jsx';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { educationData } from '../../data/education';
 import './Education.css';
 

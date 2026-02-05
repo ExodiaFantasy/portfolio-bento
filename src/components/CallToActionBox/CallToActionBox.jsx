@@ -1,7 +1,6 @@
 // filepath: d:\Codes\Portfolio\src\components\CallToActionBox\CallToActionBox.jsx
 import React from 'react';
 import BentoCard from '../BentoCard/BentoCard.jsx';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const CallToActionBox = () => {
     return (<BentoCard

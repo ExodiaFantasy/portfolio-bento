@@ -8,12 +8,10 @@ import ThemeToggle from './components/ThemeToggle/ThemeToggle.jsx';
 import Education from './components/Education/Education.jsx';
 import Projects from './components/Projects/Projects.jsx';
 import Skills from './components/Skills/Skills.jsx';
-import StatsBox from './components/StatsBox/StatsBox.jsx';
 import WorkProcessBox from './components/WorkProcessBox/WorkProcessBox.jsx';
 import OnlinePresenceBox from './components/OnlinePresenceBox/OnlinePresenceBox.jsx';
 import CallToActionBox from './components/CallToActionBox/CallToActionBox.jsx';
 import Certifications from './components/Certifications/Certifications.jsx';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const App = () => {
     return (

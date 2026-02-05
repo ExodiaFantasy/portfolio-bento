@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import BentoCard from '../BentoCard/BentoCard.jsx';
 import { projects as projectsData } from '../../data/projects';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Projects.css';
 
 const Projects = () => {

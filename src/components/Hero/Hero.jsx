@@ -1,7 +1,6 @@
 // filepath: d:\Codes\Portfolio\src\components\Hero\Hero.jsx
 import React from 'react';
 import './Hero.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import NeuralBackground from './NeuralBackground';
 
 const Hero = () => {

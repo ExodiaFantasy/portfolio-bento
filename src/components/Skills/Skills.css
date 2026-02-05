@@ -1,79 +1,62 @@
 /* filepath: d:\Codes\Portfolio\src\components\Skills\Skills.css */
-.skills-container {
-  max-height: 400px;
-  min-height: 0;
-  overflow-y: auto;
-  padding-right: 6px;
-  scroll-behavior: smooth;
-}
-
-/* Custom scrollbar styling - matching Certifications */
-.skills-container::-webkit-scrollbar {
-  width: 8px;
-}
-
-.skills-container::-webkit-scrollbar-track {
-  background: transparent;
-  border-radius: 6px;
-}
-
-.skills-container::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 6px;
-}
-
-.dark .skills-container::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.dark .skills-container::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.12);
-}
-
-@supports (scrollbar-width: thin) {
-  .skills-container {
-    scrollbar-width: thin;
-    scrollbar-color: rgba(255, 255, 255, 0.08) transparent;
-  }
-}
-
 .skills-card {
-  transition: all 0.3s ease;
+    position: relative;
 }
 
-.skill-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 10px 12px;
-  margin-bottom: 8px;
-  border-radius: 8px;
-  background-color: rgba(243, 244, 246, 0.2);
-  transition: all 0.2s ease;
-  border-left: 3px solid transparent;
+.skills-scroll-container {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+    scroll-behavior: smooth;
+    position: relative;
 }
 
-.dark .skill-row {
-  background-color: rgba(55, 65, 81, 0.3);
+.skills-scroll-container::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
 }
 
-.skill-row:hover {
-  background-color: rgba(243, 244, 246, 0.5);
-  transform: translateX(3px);
-  border-left: 3px solid #3b82f6;
+/* Scroll fade indicators */
+.skills-scroll-container::before,
+.skills-scroll-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 16px;
+    width: 40px;
+    pointer-events: none;
+    z-index: 1;
 }
 
-.dark .skill-row:hover {
-  background-color: rgba(55, 65, 81, 0.5);
-  border-left: 3px solid #60a5fa;
+.skills-scroll-container::before {
+    left: 0;
+    background: linear-gradient(to right, 
+        rgba(255, 255, 255, 1) 0%, 
+        rgba(255, 255, 255, 0) 100%);
 }
 
-.star {
-  font-size: 0.9rem;
-  margin-right: 2px;
-  transition: all 0.2s ease;
+.skills-scroll-container::after {
+    right: 0;
+    background: linear-gradient(to left, 
+        rgba(255, 255, 255, 1) 0%, 
+        rgba(255, 255, 255, 0) 100%);
 }
 
-.skill-row:hover .star {
-  transform: scale(1.1);
+/* Dark mode fade */
+.dark .skills-scroll-container::before {
+    background: linear-gradient(to right, 
+        rgba(0, 0, 0, 1) 0%, 
+        rgba(0, 0, 0, 0) 100%);
+}
+
+.dark .skills-scroll-container::after {
+    background: linear-gradient(to left, 
+        rgba(0, 0, 0, 1) 0%, 
+        rgba(0, 0, 0, 0) 100%);
+}
+
+.skill-pill {
+    cursor: default;
+}
+
+.skill-pill:hover {
+    transform: translateY(-1px);
 }

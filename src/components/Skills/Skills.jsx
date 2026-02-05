@@ -5,25 +5,19 @@ import { skills as skillsData } from '../../data/skills';
 import './Skills.css';
 
 const Skills = ({ colSpan = "col-span-12" }) => {
-    // Group skills by category
-    const technicalSkills = skillsData.filter((_, index) => index < 8);
-    const professionalSkills = skillsData.filter((_, index) => index >= 8);
-    
-    const renderSkillCard = (skill, index) => (
+    const renderSkillPill = (skill, index) => (
         <div 
             key={index} 
-            className="skill-card border border-black/10 dark:border-white/10 p-4 flex flex-col justify-between hover:bg-black/5 dark:hover:bg-white/5 transition-all hover:border-black/20 dark:hover:border-white/20 group"
+            className="skill-pill inline-flex items-center gap-2 border border-black/10 dark:border-white/10 px-4 py-2 hover:bg-black/5 dark:hover:bg-white/5 transition-all hover:border-black/20 dark:hover:border-white/20 whitespace-nowrap shrink-0"
         >
-            <div className="mb-3">
-                <h4 className="text-[11px] font-bold tracking-tight uppercase leading-tight text-black dark:text-white">
-                    {skill.name}
-                </h4>
-            </div>
-            <div className="flex space-x-1">
+            <span className="text-[10px] font-bold tracking-tight uppercase text-black dark:text-white">
+                {skill.name}
+            </span>
+            <div className="flex space-x-0.5">
                 {[...Array(5)].map((_, i) => (
                     <div
                         key={i}
-                        className={`h-1.5 flex-1 transition-all ${
+                        className={`h-1 w-1.5 ${
                             i < skill.level 
                                 ? 'bg-black dark:bg-white' 
                                 : 'bg-black/10 dark:bg-white/10'
@@ -46,23 +40,10 @@ const Skills = ({ colSpan = "col-span-12" }) => {
                 </span>
             </div>
             
-            {/* Technical Skills Grid */}
-            <div className="mb-6">
-                <h4 className="text-[10px] uppercase tracking-widest font-bold text-black dark:text-white opacity-60 mb-3">
-                    Technical
-                </h4>
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-                    {technicalSkills.map(renderSkillCard)}
-                </div>
-            </div>
-            
-            {/* Professional Skills Grid */}
-            <div className="mb-4">
-                <h4 className="text-[10px] uppercase tracking-widest font-bold text-black dark:text-white opacity-60 mb-3">
-                    Professional
-                </h4>
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-                    {professionalSkills.map(renderSkillCard)}
+            {/* Horizontal Scrollable Skills */}
+            <div className="skills-scroll-container overflow-x-auto pb-4 -mx-6 px-6">
+                <div className="flex flex-wrap gap-2">
+                    {skillsData.map(renderSkillPill)}
                 </div>
             </div>
             

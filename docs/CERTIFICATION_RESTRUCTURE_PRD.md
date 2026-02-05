@@ -15,11 +15,11 @@ Transform flat 70+ item certification list into 3-tier system optimizing for rec
 - [x] 1.5 Add metadata fields: `type`, `examBased`, `capability`, `components`
 
 ### Phase 2: Deduplication
-- [ ] 2.1 Merge AI Practitioner + Early Adopter → single record
-- [ ] 2.2 Merge Cloud Practitioner variants → single record
-- [ ] 2.3 Collapse 30+ AWS Connect courses → single grouped entry
-- [ ] 2.4 Collapse GenAI training courses → single grouped entry
-- [ ] 2.5 Move attendance/awards/intro courses to archive
+- [x] 2.1 Merge AI Practitioner + Early Adopter → single record
+- [x] 2.2 Merge Cloud Practitioner variants → single record
+- [x] 2.3 Collapse 30+ AWS Connect courses → single grouped entry
+- [x] 2.4 Collapse GenAI training courses → single grouped entry
+- [x] 2.5 Move attendance/awards/intro courses to archive
 
 ### Phase 3: UI Component Update
 - [ ] 3.1 Update `Certifications.jsx` to import new structure

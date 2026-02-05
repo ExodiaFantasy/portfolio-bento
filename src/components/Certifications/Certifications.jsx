@@ -193,7 +193,7 @@ const Certifications = () => {
     }, [isArchiveOpen]);
 
     return (<BentoCard
-        colSpan="col-span-12 md:col-span-8"
+        colSpan="col-span-12"
         className="certifications-card flex flex-col pb-0"
     >
         {/* Header */}

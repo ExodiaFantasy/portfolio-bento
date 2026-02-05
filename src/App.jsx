@@ -55,7 +55,7 @@ const App = () => {
                         <span className="text-[10px] uppercase tracking-[0.3em] font-bold">Technical Matrix // 02</span>
                     </div>
                     <Certifications />
-                    <Skills />
+                    <Skills colSpan="col-span-12" />
 
                     {/* Featured Projects Section */}
                     <div className="col-span-12 mt-12 mb-4 opacity-60">

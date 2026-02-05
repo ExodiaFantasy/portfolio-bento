@@ -1,33 +1,57 @@
 export const certifications = [
     {
         title: "AWS Certified AI Practitioner (Early Adopter)",
-        issuer: "Amazon Web Services",
+        issuer: "AWS",
         year: 2025,
         proof: "https://www.credly.com/badges/aa4e9d36-bd04-45dd-bad7-1803e39a6aea/public_url"
     },
     {
         title: "AWS Certified AI Practitioner",
-        issuer: "Amazon Web Services",
+        issuer: "AWS",
         year: 2025,
         proof: "https://www.credly.com/badges/31c32933-5e24-431f-ba63-8e5c9e41c3df/public_url"
     },
     {
-        title: "Amazon Connect Developer & Communication Specialist",
-        issuer: "Amazon Web Services Inc.",
+        title: "AWS Connect Developer & Communication Specialist",
+        issuer: "AWS",
         year: 2024,
         proof: "/Certificates/Amazon- Connect Developer Assessment.pdf"
     },
     {
         title: "AWS Certified Cloud Practitioner",
-        issuer: "Amazon Web Services",
+        issuer: "AWS",
         year: 2024,
         proof: "/Certificates/Amazon- Cloud Practitioner Certificate.pdf"
     },
     {
         title: "AWS Foundations of Prompt Engineering",
-        issuer: "Amazon Web Services",
+        issuer: "AWS",
         year: 2026,
-        proof: "/Certificates/AWS - Foundations of Prompt Engineering.pdf"
+        proof: "/Certificates/Amazon - Foundations of Prompt Engineering.pdf"
+    },
+    {
+        title: "AWS Generative AI Professional Domain 1",
+        issuer: "AWS",
+        year: 2026,
+        proof: "/Certificates/Amazon -  Gen AI Professional Domain 1.pdf"
+    },
+    {
+        title: "AWS Official Pretest Certified Generative AI Professional",
+        issuer: "AWS",
+        year: 2026,
+        proof: "/Certificates/Amazon - Official Pretest AWS Certified Generative AI Professional.pdf"
+    },
+    {
+        title: "AWS Automate Handout Creation with BDA and Step Functions",
+        issuer: "AWS",
+        year: 2026,
+        proof: "/Certificates/Amazon- Automate Handout Creation with BDA and Step Functions.pdf"
+    },
+    {
+        title: "AWS Building Secure and Responsible Gen AI with GuardRails for Amazon Bedrock",
+        issuer: "AWS",
+        year: 2026,
+        proof: "/Certificates/Amazon- Building Secure and Responsible Gen AI with GuardRails for Amazon Bedrock pdf.pdf"
     },
     {
         title: "Data Analytics Bootcamp",
@@ -46,6 +70,36 @@ export const certifications = [
         issuer: "Google",
         year: 2024,
         proof: "/Certificates/Google- Data, Data, Everywhere.pdf"
+    },
+    {
+        title: "Introduction to AI",
+        issuer: "Google",
+        year: 2026,
+        proof: "/Certificates/Google - Introduction to AI.pdf"
+    },
+    {
+        title: "Accelerate Your Job Search with AI",
+        issuer: "Google",
+        year: 2026,
+        proof: "/Certificates/Google- Accelerate Your Job Search with AI.pdf"
+    },
+    {
+        title: "Data Analytics Capstone",
+        issuer: "Google",
+        year: 2026,
+        proof: "/Certificates/Google- Data Analytics Capstone.pdf"
+    },
+    {
+        title: "The Nuts and Bolts of Machine Learning",
+        issuer: "Google",
+        year: 2026,
+        proof: "/Certificates/Google- The nuts and bolts of Machine Learaning.pdf"
+    },
+    {
+        title: "Simple Linear Regression for the Absolute Beginner",
+        issuer: "Coursera",
+        year: 2026,
+        proof: "/Certificates/Cousera - Simple Linear Regression for the Absolute.pdf"
     },
     {
         title: "Introduction to Data Science",
@@ -82,212 +136,212 @@ export const certifications = [
 export const certificationArchive = [
     {
         title: "AI Practitioner Certificate",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- AI Practitioner Certificate.pdf"
     },
     {
         title: "AI Practitioner Early Adopter",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- AI Practitioner Early Adopter.png"
     },
     {
         title: "AI Practitioner",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- AI Practitioner.png"
     },
     {
         title: "AWS Billing and Cost Management",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- AWS Billing and Cost Management.pdf"
     },
     {
         title: "AWS Cloud Practitioner Essentials",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- AWS Cloud Practitioner Essentials.pdf"
     },
     {
         title: "Amazon Lex Getting Started",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Amazon Lex Getting Started.pdf"
     },
     {
         title: "Cloud Essentials Knowledge Badge Assessment",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Cloud Essentials Knowledge Badge Assessment.pdf"
     },
     {
         title: "Cloud Essentials-Knowledge Badge Readiness Path",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Cloud Essentials-Knowledge Badge Readiness Path.pdf"
     },
     {
         title: "Cloud Essentials",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Cloud Essentials.png"
     },
     {
         title: "Cloud Practitioner",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Cloud Practitioner.pdf"
     },
     {
         title: "Cloud Practitioner",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Cloud Practitioner.png"
     },
     {
         title: "Connect APIs Intermediate",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Connect APIs Intermediate.pdf"
     },
     {
         title: "Connect Agent Applications Fundamentals",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Connect Agent Applications Fundamentals.pdf"
     },
     {
         title: "Connect Chat and Messaging Fundamentals",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Connect Chat and Messaging Fundamentals.pdf"
     },
     {
         title: "Connect Chat and Messaging Intermediate",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Connect Chat and Messaging Intermediate.pdf"
     },
     {
         title: "Connect Communications Specialist Assessment",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Connect Communications Specialist Assessment.pdf"
     },
     {
         title: "Connect Communications Specialist",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Connect Communications Specialist.png"
     },
     {
         title: "Connect Console Fundamentals",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Connect Console Fundamentals.pdf"
     },
     {
         title: "Connect Contact Lens Fundamentals",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Connect Contact Lens Fundamentals.pdf"
     },
     {
         title: "Connect Conversational Interfaces Fundamentals",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Connect Conversational Interfaces Fundamentals.pdf"
     },
     {
         title: "Connect Conversational Interfaces Intermediate",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Connect Conversational Interfaces Intermediate.pdf"
     },
     {
         title: "Connect Custom Contact Control Panel Fundamentals",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Connect Custom Contact Control Panel Fundamentals.pdf"
     },
     {
         title: "Connect Custom Contact Control Panel Intermediate",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Connect Custom Contact Control Panel Intermediate.pdf"
     },
     {
         title: "Connect Customer Profiles Fundamentals",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Connect Customer Profiles Fundamentals.pdf"
     },
     {
         title: "Connect Data Streaming Intermediate",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Connect Data Streaming Intermediate.pdf"
     },
     {
         title: "Connect Developer",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Connect Developer.png"
     },
     {
         title: "Connect Flows Fundamentals",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Connect Flows Fundamentals.pdf"
     },
     {
         title: "Connect Flows Intermediate",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Connect Flows Intermediate.pdf"
     },
     {
         title: "Connect Flows Lambda Integration Fundamentals",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Connect Flows Lambda Integration Fundamentals.pdf"
     },
     {
         title: "Connect Flows Lambda Integration Intermediate",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Connect Flows Lambda Integration Intermediate.pdf"
     },
     {
         title: "Connect Instance Fundamentals",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Connect Instance Fundamentals.pdf"
     },
     {
         title: "Connect Integrations Intermediate",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Connect Integrations Intermediate.pdf"
     },
     {
         title: "Connect Introduction",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Connect Introduction.pdf"
     },
     {
         title: "Connect Optimizing Routing Solutions",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Connect Optimizing Routing Solutions.pdf"
     },
     {
         title: "Connect Routing Fundamentals",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Connect Routing Fundamentals.pdf"
     },
     {
         title: "Connect Routing Intermediate",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Connect Routing Intermediate.pdf"
     },
     {
         title: "Connect Voice Intermediate",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Connect Voice Intermediate.pdf"
     },
     {
         title: "Connect and EventBridge Intermediate",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Connect and EventBridge Intermediate.pdf"
     },
     {
         title: "Foundations Getting Started with AWS Cloud Essentials",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Foundations Getting Started with AWS Cloud Essentials.pdf"
     },
     {
         title: "Getting Started with Cloud Acquisition",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Getting Started with Cloud Acquisition.pdf"
     },
     {
-        title: "Infrastracture as Code Fundamentals",
-        issuer: "Amazon",
+        title: "Infrastructure as Code Fundamentals",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Infrastracture as Code Fundamentals.pdf"
     },
     {
         title: "Job Roles in the Cloud",
-        issuer: "Amazon",
+        issuer: "AWS",
         proof: "/Certificates/Amazon- Job Roles in the Cloud.pdf"
     },
     {

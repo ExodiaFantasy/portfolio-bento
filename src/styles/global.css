@@ -548,6 +548,9 @@ video {
 .mt-0 {
   margin-top: 0px;
 }
+.mt-1 {
+  margin-top: 0.25rem;
+}
 .mt-10 {
   margin-top: 2.5rem;
 }
@@ -559,6 +562,12 @@ video {
 }
 .mt-20 {
   margin-top: 5rem;
+}
+.mt-3 {
+  margin-top: 0.75rem;
+}
+.mt-4 {
+  margin-top: 1rem;
 }
 .mt-6 {
   margin-top: 1.5rem;
@@ -590,6 +599,9 @@ video {
 .contents {
   display: contents;
 }
+.hidden {
+  display: none;
+}
 .aspect-video {
   aspect-ratio: 16 / 9;
 }
@@ -607,6 +619,9 @@ video {
 }
 .h-3 {
   height: 0.75rem;
+}
+.h-4 {
+  height: 1rem;
 }
 .h-6 {
   height: 1.5rem;
@@ -811,10 +826,20 @@ video {
   margin-right: calc(0.75rem * var(--tw-space-x-reverse));
   margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
 }
+.space-y-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+}
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+.space-y-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
@@ -902,6 +927,9 @@ video {
 .bg-black\/20 {
   background-color: rgb(0 0 0 / 0.2);
 }
+.bg-black\/5 {
+  background-color: rgb(0 0 0 / 0.05);
+}
 .bg-black\/60 {
   background-color: rgb(0 0 0 / 0.6);
 }
@@ -949,6 +977,10 @@ video {
 .p-8 {
   padding: 2rem;
 }
+.px-1\.5 {
+  padding-left: 0.375rem;
+  padding-right: 0.375rem;
+}
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -968,6 +1000,10 @@ video {
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+.py-0\.5 {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
 }
 .py-1 {
   padding-top: 0.25rem;
@@ -1000,6 +1036,9 @@ video {
 .pb-0 {
   padding-bottom: 0px;
 }
+.pb-0\.5 {
+  padding-bottom: 0.125rem;
+}
 .pb-1 {
   padding-bottom: 0.25rem;
 }
@@ -1014,6 +1053,9 @@ video {
 }
 .pl-3 {
   padding-left: 0.75rem;
+}
+.pl-4 {
+  padding-left: 1rem;
 }
 .pr-2 {
   padding-right: 0.5rem;
@@ -1356,6 +1398,10 @@ video {
 
 .dark\:bg-white\/10:is(.dark *) {
   background-color: rgb(255 255 255 / 0.1);
+}
+
+.dark\:bg-white\/5:is(.dark *) {
+  background-color: rgb(255 255 255 / 0.05);
 }
 
 .dark\:text-black:is(.dark *) {

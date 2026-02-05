@@ -1,4 +1,197 @@
 /* Certifications component styles */
+
+/* ============================================================================
+   TIER STRUCTURE
+   - Featured: Always visible, prominent cards
+   - Professional: Collapsible section with grouped items
+   - Archive: Modal, hidden by default
+   ============================================================================ */
+
+/* Featured Certifications Grid */
+.featured-certs-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 640px) {
+  .featured-certs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Professional Training Section */
+.professional-section {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 1rem;
+}
+
+.dark .professional-section {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+.professional-header {
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.professional-header:hover {
+  opacity: 0.7;
+}
+
+.professional-items {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+/* Component expansion animation */
+.components-list {
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Certification Cards */
+.cert-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-width: 0;
+  transition: background-color 0.2s;
+}
+
+.cert-card:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.dark .cert-card:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Training Item Cards */
+.training-item {
+  transition: background-color 0.2s;
+}
+
+.training-item:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.dark .training-item:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Capability Tags */
+.capability-tag {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 6px;
+  background: rgba(0, 0, 0, 0.05);
+  color: inherit;
+}
+
+.dark .capability-tag {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Type Badges */
+.type-badge {
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 1px 4px;
+  border-radius: 2px;
+}
+
+.type-badge.certification {
+  background: rgba(34, 197, 94, 0.1);
+  color: rgb(34, 197, 94);
+}
+
+.type-badge.badge {
+  background: rgba(59, 130, 246, 0.1);
+  color: rgb(59, 130, 246);
+}
+
+.type-badge.training {
+  background: rgba(168, 85, 247, 0.1);
+  color: rgb(168, 85, 247);
+}
+
+.type-badge.bootcamp {
+  background: rgba(249, 115, 22, 0.1);
+  color: rgb(249, 115, 22);
+}
+
+/* Archive Modal */
+.archive-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.archive-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.dark .archive-modal-backdrop {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.archive-modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 56rem;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Custom scrollbar styling */
+.professional-items::-webkit-scrollbar,
+.archive-modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.professional-items::-webkit-scrollbar-track,
+.archive-modal-content::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.professional-items::-webkit-scrollbar-thumb,
+.archive-modal-content::-webkit-scrollbar-thumb {
+  background: rgba(113, 128, 150, 0.7);
+  border-radius: 10px;
+}
+
+.dark .professional-items::-webkit-scrollbar-track,
+.dark .archive-modal-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dark .professional-items::-webkit-scrollbar-thumb,
+.dark .archive-modal-content::-webkit-scrollbar-thumb {
+  background: rgba(160, 174, 192, 0.7);
+}
+
+/* Legacy support - remove after migration */
 .certifications-container {
   max-height: 300px;
   overflow-y: auto;
@@ -13,37 +206,6 @@
   }
 }
 
-.cert-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  min-width: 0; /* Prevent overflow in flex layouts */
-}
-
-/* Custom scrollbar styling */
-.certifications-container::-webkit-scrollbar {
-  width: 6px;
-}
-
-.certifications-container::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-}
-
-.certifications-container::-webkit-scrollbar-thumb {
-  background: rgba(113, 128, 150, 0.7);
-  border-radius: 10px;
-}
-
-.dark .certifications-container::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.dark .certifications-container::-webkit-scrollbar-thumb {
-  background: rgba(160, 174, 192, 0.7);
-}
-
 .certification-item {
   transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -55,15 +217,4 @@
 
 .dark .certification-item:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.certifications-container .flex-col {
-  text-align: left;
-}
-
-.certifications-container .flex-col h4,
-.certifications-container .flex-col p {
-  margin-left: 0;
-  text-align: left;
-  width: 100%;
 }

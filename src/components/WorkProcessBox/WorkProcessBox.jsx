@@ -40,7 +40,7 @@ const WorkProcessBox = () => {
             </div>
             <div className="">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {processes.map((process, index) => (
+                    {processes.map((process) => (
                         <div
                             key={process.id}
                             className="process-item p-4 border border-black dark:border-white flex flex-col justify-between"

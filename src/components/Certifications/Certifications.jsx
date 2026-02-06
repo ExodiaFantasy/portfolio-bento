@@ -384,7 +384,7 @@ const Certifications = () => {
         </div>
 
         {/* Archive Link */}
-        <div className="mt-6 border-t border-black/10 dark:border-white/10 pt-4 flex items-center justify-between">
+        <div className="mt-6 mb-6 border-t border-black/10 dark:border-white/10 pt-4 flex items-center justify-between">
             <span className="text-[10px] uppercase tracking-widest font-bold text-black dark:text-white">
                 Learning Archive ({learningArchive.length})
             </span>
@@ -424,7 +424,7 @@ const Certifications = () => {
                             Close
                         </button>
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 max-h-[60vh] overflow-y-auto pr-2">
+                    <div className="grid grid-cols-1 gap-3 max-h-[60vh] overflow-y-auto pr-2">
                         {learningArchive
                             .filter(cert => cert.type !== 'duplicate')
                             .map((cert, index) => (
@@ -433,10 +433,10 @@ const Certifications = () => {
                                 href={cert.proof}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-[10px] uppercase tracking-tight text-black dark:text-white border border-black/10 dark:border-white/10 px-3 py-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors flex flex-col gap-1"
+                                className="text-[10px] uppercase tracking-tight text-black dark:text-white border border-black/10 dark:border-white/10 px-4 py-3 hover:bg-black/5 dark:hover:bg-white/5 transition-colors flex flex-col gap-2"
                             >
                                 <span className="font-bold line-clamp-2">{cert.title}</span>
-                                <div className="flex items-center gap-2">
+                                <div className="flex items-center gap-2 flex-wrap">
                                     {cert.issuer && <span className="opacity-60">{cert.issuer}</span>}
                                     {cert.type && (
                                         <span className="text-[8px] px-1.5 py-0.5 bg-black/5 dark:bg-white/5 opacity-40">
